@@ -30,7 +30,7 @@
     </dependencies>
 
     <build>
-        <finalName>light</finalName>
+        <finalName>${deploy-jar-name}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
