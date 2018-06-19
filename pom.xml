@@ -30,6 +30,7 @@
     </dependencies>
 
     <build>
+        <!--read from system properties-->
         <finalName>${deploy-jar-name}</finalName>
         <plugins>
             <plugin>
