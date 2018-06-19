@@ -5,9 +5,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
-@RequestMapping(value = "/handle")
+@RequestMapping(value = "/time")
 public class MainCtl {
     private static final Logger LOGGER = LoggerFactory.getLogger(MainCtl.class);
+
+    @RequestMapping(path = "/normal")
+    public Map<String, Object> first() {
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+        return res;
+    }
 
 }
